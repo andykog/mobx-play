@@ -1,0 +1,39 @@
+{
+  "name": "mobx-react-todomvc-play",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andykog/mobx-play/"
+  },
+  "keywords": [],
+  "author": "Andrey Kogut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andykog/mobx-play/issues"
+  },
+  "homepage": "https://github.com/andykog/mobx-play/",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "postinstall": "git submodule update --init ; git submodule foreach yarn"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^0.11.2",
+    "react": "^15.6.1",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.3",
+    "ts-loader": "^2.3.3",
+    "typescript": "^2.4.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-hot-middleware": "^2.18.2"
+  }
+}
