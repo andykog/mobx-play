@@ -23,6 +23,7 @@ module.exports = {
     alias: {
       mobx: path.resolve(__dirname, './mobx/src/mobx.ts'),
       'mobx-react': path.resolve(__dirname, './mobx-react/src'),
+      'mobx-utils': path.resolve(__dirname, './mobx-utils/src/mobx-utils.ts'),
       'mobx-react-devtools': path.resolve(__dirname, './mobx-react-devtools/src')
     },
     extensions: ['.js', '.jsx', '.ts']
@@ -61,8 +62,25 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        exclude: /(node_modules)/,
+        include: path.resolve(__dirname, './mobx/'),
         loader: 'ts-loader',
+        query: {
+          instance: 'mobx',
+          configFileName: './mobx/tsconfig.json',
+          types: ['node'],
+          typeRoots: [ 'mobx/node_modules/@types' ],
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        include: path.resolve(__dirname, './mobx-utils/'),
+        loader: 'ts-loader',
+        query: {
+          instance: 'mobx-utils',
+          configFileName: './mobx-utils/src/tsconfig.json',
+          types: ['node'],
+          typeRoots: [ 'mobx-utils/node_modules/@types' ],
+        }
       }
     ],
   },

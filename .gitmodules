@@ -10,3 +10,6 @@
 [submodule "mobx-react-devtools"]
 	path = mobx-react-devtools
 	url = https://github.com/mobxjs/mobx-react-devtools
+[submodule "mobx-utils"]
+	path = mobx-utils
+	url = https://github.com/mobxjs/mobx-utils.git
